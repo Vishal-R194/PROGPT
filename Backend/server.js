@@ -6,10 +6,13 @@ import chatRoutes from "./routes/chat.js";
 import authRoutes from "./routes/auth.js";
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5173"
+}));
 
 app.use("/api", chatRoutes);
 app.use("/api/auth", authRoutes);
@@ -20,10 +23,11 @@ const connectDB = async () => {
         console.log("Connected with Database!");
 
         app.listen(PORT, () => {
-            console.log(`Server running on ${PORT}`);
+            console.log(`Server running on port ${PORT}`);
         });
     } catch (err) {
-        console.log("Failed to connect with DB", err);
+        console.error("Failed to connect with DB:", err);
+        process.exit(1);
     }
 };
 

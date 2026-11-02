@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Auth.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Auth({ onLogin }) {
     const [isSignup, setIsSignup] = useState(false);
@@ -18,7 +19,7 @@ function Auth({ onLogin }) {
             const endpoint = isSignup ? "signup" : "login";
 
             const response = await fetch(
-                `http://localhost:8080/api/auth/${endpoint}`,
+                `${API_URL}/api/auth/${endpoint}`,
                 {
                     method: "POST",
                     headers: {

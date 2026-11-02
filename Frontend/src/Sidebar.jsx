@@ -2,6 +2,7 @@ import "./Sidebar.css";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v4 as uuidv4 } from "uuid";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Sidebar() {
     const {
@@ -25,7 +26,7 @@ function Sidebar() {
 
         try {
             const response = await fetch(
-                "http://localhost:8080/api/thread",
+                `${API_URL}/api/thread`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -67,7 +68,7 @@ function Sidebar() {
     const changeThread = async (newThreadId) => {
         try {
             const response = await fetch(
-                `http://localhost:8080/api/thread/${newThreadId}`,
+                `${API_URL}/api/thread/${newThreadId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -112,7 +113,7 @@ function Sidebar() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/thread/${threadId}`,
+                	`${API_URL}/api/thread/${threadId}`,
                 {
                     method: "PATCH",
                     headers: {
@@ -156,7 +157,7 @@ function Sidebar() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/thread/${threadId}`,
+                	`${API_URL}/api/thread/${threadId}`,
                 {
                     method: "DELETE",
                     headers: {
