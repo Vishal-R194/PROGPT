@@ -1,0 +1,395 @@
+.sidebar {
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100%;
+    width: 260px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* New chat button */
+.sidebar button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ececec;
+    cursor: pointer;
+}
+
+.logo {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar button span {
+    font-size: 20px;
+}
+
+.sidebar button:hover {
+    background-color: rgba(180, 180, 180, 0.08);
+}
+
+/* Chat history */
+.history {
+    margin: 10px 5px;
+    padding: 0 5px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.history li {
+    list-style: none;
+    cursor: pointer;
+    padding: 12px 35px 12px 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.history li:hover {
+    background-color: rgba(180, 180, 180, 0.08);
+}
+
+.history li.highlighted {
+    background-color: rgba(180, 180, 180, 0.12);
+}
+
+/* Delete icon */
+.history li .fa-trash {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    color: #b4b4b4;
+}
+
+.history li:hover .fa-trash {
+    opacity: 1;
+}
+
+.history li .fa-trash:hover {
+    color: #f87171;
+}
+
+/* Footer */
+.sign {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 200px;
+        min-width: 200px;
+    }
+
+    .history li {
+        font-size: 12px;
+    }
+}
+
+
+/* Chat title and action buttons */
+.history li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 8px;
+}
+
+.threadTitle {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.threadActions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.history li:hover .threadActions,
+.history li:focus-within .threadActions {
+    opacity: 1;
+}
+
+.threadAction {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #b4b4b4;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.threadAction:hover {
+    background: #333;
+    color: #fff;
+}
+
+.renameForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+}
+
+.renameInput {
+    width: 0;
+    min-width: 0;
+    flex: 1;
+    padding: 6px;
+    color: #fff;
+    background: #303030;
+    border: 1px solid #666;
+    border-radius: 5px;
+    outline: none;
+}
+
+.renameInput:focus {
+    border-color: #aaa;
+}
+
+.saveAction {
+    color: #9be7a5;
+}
+
+@media (hover: none) {
+    .threadActions {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .history li {
+        font-size: 12px;
+    }
+
+    .threadAction {
+        width: 26px;
+        height: 30px;
+    }
+}
+
+
+/* Correct chat history alignment */
+.history li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+    position: relative;
+    padding: 8px;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+
+.threadTitle {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.threadActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.threadAction {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #b4b4b4;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.threadAction i {
+    font-size: 13px;
+    line-height: 1;
+}
+
+.threadAction:hover {
+    background: #333;
+    color: #fff;
+}
+
+.renameForm {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+}
+
+.renameInput {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+}
+
+@media (hover: hover) {
+    .threadActions {
+        opacity: 0;
+    }
+
+    .history li:hover .threadActions,
+    .history li:focus-within .threadActions {
+        opacity: 1;
+    }
+}
+
+@media (hover: none) {
+    .threadActions {
+        opacity: 1;
+    }
+}
+
+
+.threadAction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.threadAction i {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.threadAction i.fa-pen {
+    transform: translateX(-1px);
+}
+
+.threadAction i.fa-trash {
+    position: relative;
+    left: -8px;
+    top: 1px;
+    transform: none;
+}
+
+
+.app.theme-light .sidebar {
+    background-color: #f7f7f8;
+    color: #333333;
+    border-right: 1px solid #e5e5e5;
+}
+
+/* New chat button */
+.app.theme-light .sidebar button {
+    color: #202123;
+    border-color: #d9d9e3;
+}
+
+.app.theme-light .sidebar button:hover {
+    background-color: #e9e9eb;
+}
+
+/* Chat history */
+.app.theme-light .history li {
+    color: #333333;
+}
+
+.app.theme-light .history li:hover {
+    background-color: #e9e9eb;
+}
+
+.app.theme-light .history li.highlighted {
+    background-color: #dedee3;
+}
+
+/* Thread action buttons */
+.app.theme-light .threadAction {
+    color: #666666;
+}
+
+.app.theme-light .threadAction:hover {
+    background-color: #dcdce1;
+    color: #202123;
+}
+
+/* Delete icon */
+.app.theme-light .history li .fa-trash {
+    color: #666666;
+}
+
+.app.theme-light .history li .fa-trash:hover {
+    color: #dc2626;
+}
+
+/* Rename input */
+.app.theme-light .renameInput {
+    color: #202123;
+    background-color: #ffffff;
+    border-color: #c7c7c7;
+}
+
+.app.theme-light .renameInput:focus {
+    border-color: #777777;
+}
+
+/* Footer */
+.app.theme-light .sign {
+    color: #555555;
+    border-top-color: #dddddd;
+}
+

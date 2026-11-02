@@ -1,0 +1,128 @@
+.authPage {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #f7f8fc;
+    color: #202123;
+}
+
+.authCard {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+}
+
+.authLogo {
+    margin-bottom: 28px;
+    color: #10a37f;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.authCard h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.authSubtitle {
+    margin: 0 0 28px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.authField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.authField label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.authField input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #fff;
+    color: #202123;
+}
+
+.authField input:focus {
+    border-color: #10a37f;
+    box-shadow: 0 0 0 3px rgba(16, 163, 127, 0.12);
+}
+
+.authError {
+    margin: 0 0 16px;
+    color: #dc2626;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.authSubmit {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #10a37f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.authSubmit:hover {
+    background: #0d8d6e;
+}
+
+.authSubmit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.authSwitch {
+    margin: 24px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+}
+
+.authSwitch button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #0d9674;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .authPage {
+        padding: 16px;
+    }
+
+    .authCard {
+        padding: 26px 20px;
+    }
+}

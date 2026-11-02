@@ -1,0 +1,479 @@
+.settingsPage {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background: #212121;
+    color: #ececec;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Top bar */
+
+.settingsTopbar {
+    height: 60px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 28px;
+    border-bottom: 1px solid #383838;
+    background: #212121;
+}
+
+.settingsBackBtn {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    color: #ececec;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.settingsBackBtn:hover {
+    background: #333333;
+}
+
+.settingsBrand {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.settingsDivider {
+    color: #666;
+}
+
+.settingsTopTitle {
+    color: #b4b4b4;
+    font-size: 14px;
+}
+
+/* Main layout */
+
+.settingsLayout {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Left navigation */
+
+.settingsNavigation {
+    width: 260px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 16px 16px;
+    border-right: 1px solid #383838;
+    background: #171717;
+    box-sizing: border-box;
+}
+
+.settingsNavigation h2 {
+    margin: 0 12px 24px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.settingsNavigation nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.settingsNavItem {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #b4b4b4;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.settingsNavItem > i:first-child {
+    width: 18px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.settingsNavItem:hover {
+    background: #292929;
+    color: #fff;
+}
+
+.settingsNavItem.active {
+    background: #303030;
+    color: #fff;
+}
+
+.settingsNavItem .navArrow {
+    margin-left: auto;
+    font-size: 11px;
+    color: #888;
+}
+
+.settingsNavFooter {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: auto;
+    padding: 16px 6px 4px;
+    border-top: 1px solid #383838;
+}
+
+.settingsAvatar,
+.settingsLargeAvatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #339cff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.settingsAvatar {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+}
+
+.settingsUserInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.settingsUserInfo strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.settingsUserInfo span {
+    overflow: hidden;
+    color: #999;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Content panel */
+
+.settingsContent {
+    flex: 1;
+    min-width: 0;
+    overflow-y: auto;
+    background: #212121;
+}
+
+.settingsContentInner {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 42px 48px 60px;
+    box-sizing: border-box;
+}
+
+.settingsContentInner > h1 {
+    margin: 0 0 32px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+/* Sections */
+
+.settingsSection {
+    padding: 0 0 26px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #383838;
+}
+
+.settingsSection h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.settingsDescription {
+    margin: 8px 0 20px;
+    color: #a1a1a1;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.settingsOptionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.settingsOptionRow strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.settingsOptionRow p {
+    margin: 0;
+    color: #a1a1a1;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.settingsStaticValue {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    padding: 9px 12px;
+    border: 1px solid #454545;
+    border-radius: 8px;
+    color: #ececec;
+    background: #2b2b2b;
+    font-size: 13px;
+}
+
+.settingsStatus {
+    flex-shrink: 0;
+    color: #a1a1a1;
+    font-size: 12px;
+}
+
+.settingsSecureIcon {
+    color: #a1a1a1;
+    font-size: 18px;
+}
+
+/* Account profile */
+
+.settingsProfile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0 26px;
+}
+
+.settingsLargeAvatar {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+}
+
+.settingsProfile strong {
+    font-size: 15px;
+}
+
+.settingsProfile p {
+    margin: 6px 0 0;
+    color: #a1a1a1;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.settingsField {
+    margin-bottom: 20px;
+}
+
+.settingsField label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b4b4b4;
+    font-size: 13px;
+}
+
+.settingsReadOnly {
+    padding: 13px 14px;
+    border: 1px solid #414141;
+    border-radius: 8px;
+    background: #2b2b2b;
+    color: #ececec;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.settingsBottomNote {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #858585;
+    font-size: 12px;
+}
+
+.settingsBottomNote i {
+    font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+    .settingsNavigation {
+        width: 220px;
+        min-width: 220px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .settingsContentInner {
+        padding: 34px 28px 45px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .settingsTopbar {
+        height: 54px;
+        min-height: 54px;
+        gap: 10px;
+        padding: 0 14px;
+    }
+
+    .settingsLayout {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .settingsNavigation {
+        width: 100%;
+        min-width: 0;
+        padding: 18px 14px 12px;
+        border-right: none;
+        border-bottom: 1px solid #383838;
+    }
+
+    .settingsNavigation h2 {
+        margin: 0 4px 14px;
+        font-size: 19px;
+    }
+
+    .settingsNavigation nav {
+        flex-direction: row;
+        gap: 7px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .settingsNavItem {
+        width: auto;
+        min-width: max-content;
+        min-height: 38px;
+        gap: 8px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .settingsNavItem .navArrow {
+        display: none;
+    }
+
+    .settingsNavFooter {
+        display: none;
+    }
+
+    .settingsContent {
+        flex: none;
+        overflow: visible;
+    }
+
+    .settingsContentInner {
+        padding: 27px 20px 40px;
+    }
+
+    .settingsContentInner > h1 {
+        margin-bottom: 26px;
+        font-size: 23px;
+    }
+
+    .settingsSection {
+        margin-bottom: 23px;
+        padding-bottom: 22px;
+    }
+
+    .settingsOptionRow {
+        gap: 12px;
+    }
+
+    .settingsOptionRow p {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 360px) {
+    .settingsTopTitle {
+        font-size: 13px;
+    }
+
+    .settingsContentInner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .settingsStaticValue {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+
+.themeChoices {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 140px;
+}
+
+.themeChoice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #454545;
+    border-radius: 8px;
+    background: #2b2b2b;
+    color: #ececec;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.themeChoice:hover {
+    background: #383838;
+}
+
+.themeChoice.selected {
+    border-color: #8e8e8e;
+}
+
+.themeCheck {
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    .themeChoices {
+        width: 100%;
+    }
+}

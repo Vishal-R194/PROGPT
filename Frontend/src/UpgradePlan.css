@@ -1,0 +1,379 @@
+
+.upgradePage {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow-y: auto;
+    background: #212121;
+    color: #ececec;
+}
+
+.upgradeTopbar {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 28px;
+    border-bottom: 1px solid #383838;
+}
+
+.upgradeBackBtn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.upgradeBackBtn:hover {
+    background: #303030;
+}
+
+.upgradeBrand {
+    font-weight: 700;
+}
+
+.upgradeDivider {
+    color: #777;
+}
+
+.upgradeHeading {
+    color: #b4b4b4;
+}
+
+.upgradeUser {
+    margin-left: auto;
+}
+
+.upgradeAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #339cff;
+    color: white;
+}
+
+.upgradeContent {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 28px 32px;
+}
+
+.upgradeIntro {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.upgradeEyebrow {
+    color: #a1a1aa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.upgradeEyebrow i {
+    margin-right: 8px;
+}
+
+.upgradeIntro h1 {
+    margin: 16px 0 12px;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.upgradeIntro > p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #a1a1aa;
+    line-height: 1.6;
+}
+
+.upgradeCards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.upgradeCard {
+    position: relative;
+    padding: 26px 22px;
+    border: 1px solid #414141;
+    border-radius: 14px;
+    background: #292929;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.upgradeCard.popularPlan {
+    border: 2px solid #8b8bff;
+    padding: 25px 21px;
+}
+
+.popularBadge {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #39365c;
+    color: #d7d3ff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.upgradeCard h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.planDescription {
+    min-height: 42px;
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.planPrice {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.planPrice strong {
+    font-size: 32px;
+}
+
+.planPrice span {
+    color: #a1a1aa;
+    font-size: 12px;
+}
+
+.planButton {
+    min-height: 42px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: #353535;
+    color: #ececec;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.planButton:not(:disabled):hover {
+    background: #454545;
+}
+
+.planButton:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.planButton i {
+    margin-right: 8px;
+}
+
+.primaryPlanButton {
+    background: #ececec;
+    color: #202020;
+    border-color: #ececec;
+}
+
+.primaryPlanButton:not(:disabled):hover {
+    background: #d4d4d4;
+}
+
+.planDivider {
+    height: 1px;
+    background: #414141;
+    margin: 24px 0 18px;
+}
+
+.featuresTitle {
+    margin: 0 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.planFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.planFeatures li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #d4d4d4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.planFeatures li i {
+    margin-top: 3px;
+    color: #a5a5ff;
+    font-size: 12px;
+}
+
+.upgradeMessage {
+    max-width: 600px;
+    margin: 24px auto 0;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background: #303030;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.upgradeMessage > i {
+    color: #a5a5ff;
+}
+
+.upgradeMessage span {
+    flex: 1;
+}
+
+.upgradeMessage button {
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.upgradeDisclaimer {
+    margin: 28px 0 0;
+    color: #929292;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Light theme */
+.app.theme-light .upgradePage {
+    background: #ffffff;
+    color: #202123;
+}
+
+.app.theme-light .upgradeTopbar {
+    border-color: #e5e5e5;
+}
+
+.app.theme-light .upgradeBackBtn:hover {
+    background: #eeeeee;
+}
+
+.app.theme-light .upgradeHeading,
+.app.theme-light .upgradeIntro > p,
+.app.theme-light .planDescription,
+.app.theme-light .planPrice span {
+    color: #666666;
+}
+
+.app.theme-light .upgradeCard {
+    background: #ffffff;
+    border-color: #dedede;
+}
+
+.app.theme-light .upgradeCard.popularPlan {
+    border-color: #7777d9;
+}
+
+.app.theme-light .popularBadge {
+    background: #eeeeff;
+    color: #4848a0;
+}
+
+.app.theme-light .planButton {
+    background: #f2f2f2;
+    color: #202123;
+    border-color: #d8d8d8;
+}
+
+.app.theme-light .planButton:not(:disabled):hover {
+    background: #e6e6e6;
+}
+
+.app.theme-light .planButton.primaryPlanButton {
+    background: #252525;
+    color: #ffffff;
+    border-color: #252525;
+}
+
+.app.theme-light .planButton.primaryPlanButton:hover {
+    background: #444444;
+}
+
+.app.theme-light .planDivider {
+    background: #e5e5e5;
+}
+
+.app.theme-light .planFeatures li {
+    color: #404040;
+}
+
+.app.theme-light .planFeatures li i {
+    color: #6464bb;
+}
+
+.app.theme-light .upgradeMessage {
+    background: #f7f7f7;
+    border-color: #dedede;
+}
+
+.app.theme-light .upgradeDisclaimer {
+    color: #666666;
+}
+
+/* Mobile layout */
+@media (max-width: 850px) {
+    .upgradeCards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .upgradeCard,
+    .upgradeCard.popularPlan {
+        padding: 24px;
+    }
+
+    .planDescription {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .upgradeTopbar {
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .upgradeContent {
+        padding: 30px 16px 24px;
+    }
+
+    .upgradeIntro {
+        margin-bottom: 28px;
+    }
+
+    .upgradeIntro h1 {
+        font-size: 27px;
+    }
+}

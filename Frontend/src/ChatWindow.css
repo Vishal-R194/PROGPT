@@ -1,0 +1,328 @@
+.chatWindow {
+    background-color: #212121;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar span {
+    margin: 1rem 2rem;
+}
+
+.userIconDiv {
+    margin: 1rem 2rem;
+    cursor: pointer;
+}
+
+.userIcon {
+    background-color: #339cff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chat area */
+.chatWindow > .chats {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+}
+
+/* Chat input */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    flex-shrink: 0;
+}
+
+.inputBox {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputBox input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ececec;
+    padding: 20px 55px 20px 20px;
+    font-size: 0.9rem;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 4px 12px;
+}
+
+.inputBox input:focus {
+    outline: 1px solid #555;
+}
+
+.inputBox input:disabled {
+    opacity: 0.7;
+}
+
+#submit {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit:hover i {
+    color: #fff;
+}
+
+.info {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: #b4b4b4;
+    margin: 0.5rem 0;
+}
+
+/* Dropdown */
+.dropDown {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    width: 170px;
+    background-color: #323232;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropDownItem {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    padding: 0.6rem 0.5rem;
+    cursor: pointer;
+}
+
+.dropDownItem:hover {
+    background-color: rgba(180, 180, 180, 0.1);
+    border-radius: 6px;
+}
+
+/* Loading indicator */
+.loader {
+    flex-shrink: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .navbar span,
+    .userIconDiv {
+        margin: 1rem;
+    }
+
+    .chatInput {
+        padding: 0 0.75rem;
+    }
+
+    .chatWindow > .chats {
+        padding: 1rem;
+    }
+
+    .info {
+        font-size: 0.7rem;
+    }
+
+    .dropDown {
+        right: 1rem;
+    }
+}
+
+
+.menuButton {
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.menuButton:hover {
+    background-color: #303030;
+}
+
+.brandName {
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .menuButton {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .brandName {
+        margin-right: auto;
+        font-size: 17px;
+    }
+
+    .userIconDiv {
+        flex-shrink: 0;
+    }
+
+    .chatInput {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .inputBox {
+        width: 100%;
+    }
+
+    .info {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+}
+
+
+.thinkingIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #b4b4b4;
+    font-size: 13px;
+}
+
+.thinkingIndicator span {
+    animation: thinkingFade 1.5s ease-in-out infinite;
+}
+
+@keyframes thinkingFade {
+    0%, 100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* Light theme - Chat Window */
+.app.theme-light .chatWindow {
+    background-color: #ffffff;
+    color: #202123;
+}
+
+/* Navbar */
+.app.theme-light .navbar {
+    background-color: #ffffff;
+    color: #202123;
+}
+
+.app.theme-light .navbar span {
+    color: #202123;
+}
+
+.app.theme-light .menuButton {
+    color: #202123;
+}
+
+.app.theme-light .menuButton:hover {
+    background-color: #e9e9e9;
+}
+
+/* Chat input */
+.app.theme-light .inputBox input {
+    background-color: #f4f4f4;
+    color: #202123;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.app.theme-light .inputBox input::placeholder {
+    color: #777777;
+}
+
+.app.theme-light .inputBox input:focus {
+    outline: 1px solid #b0b0b0;
+}
+
+.app.theme-light #submit {
+    color: #202123;
+}
+
+.app.theme-light #submit:hover i {
+    color: #555555;
+}
+
+/* Disclaimer text */
+.app.theme-light .info {
+    color: #666666;
+}
+
+/* Profile dropdown */
+.app.theme-light .dropDown {
+    background-color: #ffffff;
+    color: #202123;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.app.theme-light .dropDownItem {
+    color: #202123;
+}
+
+.app.theme-light .dropDownItem:hover {
+    background-color: #eeeeee;
+}
+
+/* Thinking indicator */
+.app.theme-light .thinkingIndicator {
+    color: #555555;
+}
+
+
